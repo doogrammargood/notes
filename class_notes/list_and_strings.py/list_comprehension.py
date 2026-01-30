@@ -9,21 +9,21 @@ Today, we will see list comprehensions. They are easy ways of creating lists.
 x = "this is a string."
 y = x.split()
 z = "_".join(y)
-print(z) #What gets printed?
+print(1,z) #What gets printed?
 
 #List comprehensions: first example
 #List comprehensions allow you to create new lists by transforming existent lists. (They do not modify the existing list.)
 L = [5,6,9,10]
 #Suppose we want to double each element of L.
 L_doubled = [2*x for x in L] #This is a list comprehension.
-
+print(2, L, L_doubled)
 #List comprehensions: second example:
 #We want to produce an acronym from a string. "The Art of Computer Programming" should become "T.A.O.C.P."
 my_string = "The Art of Computer Programming"
 words = my_string.split()
 first_letters = [word[0] for word in words]
 capitalized_first_letters = [l.capitalize() for l in first_letters]
-print(".".join(capitalized_first_letters)+".")
+print(3,".".join(capitalized_first_letters)+".")
 
 #List comprehensions: third examples:
 #Sequences of numbers defined by a formula
@@ -36,5 +36,3 @@ reciprocals = [1/n for n in range(1,10)] #watch out for division by 0.
 
 fruits=["apple","passionfruit","orange","bananna", "olive", "pear","grapefruit","tomato","jackfruit"]
 fruits_that_end_in_fruit = [f for f in fruits if f[-5:]=="fruit"]
-
-#Example

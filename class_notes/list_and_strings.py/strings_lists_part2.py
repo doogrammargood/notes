@@ -40,8 +40,8 @@ print(12,x.split())
 y="This is one sentence. This is another sentence. And a third."
 print(13, y.split('.'))
 
-print(14, "".join(z), z[0]+ z[1]+z[2]+z[3])
-print(15, "-".join(z), z[0]+ z[1]+z[2]+z[3])
+print(14, "".join(z))
+print(15, "-".join(z))
 #---Nested lists
 x = [[1,2],[3,4,5]]
 print(16,len(x))
