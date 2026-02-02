@@ -36,12 +36,14 @@ print(11, x+[])
 #--String methods: Join and Split
 x="This is my sentence."
 z=x.split()
+print(11.1,type(z))
 print(12,x.split())
 y="This is one sentence. This is another sentence. And a third."
 print(13, y.split('.'))
 
 print(14, "".join(z))
 print(15, "-".join(z))
+
 #---Nested lists
 x = [[1,2],[3,4,5]]
 print(16,len(x))
