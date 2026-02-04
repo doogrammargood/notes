@@ -7,8 +7,11 @@ def problem_1()->str:
         Step 2: Use a list comprehension, string addition, and the .captalize() function to capitalize the zeroth letter of each word.
         Step 3: Use the join function to recombine the words into a string.'''
     initial_string:str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    #TODO: follow the steps to complete this function. Your final answer should be stored in the variable string_with_each_word_captalized.
-    pass #Remove this line.
+    init_string_after_step_1 = initial_string.split()
+    init_string_after_step_2 =[s.capitalize() for s in init_string_after_step_1]
+    init_string_after_step_3 = " ".join(init_string_after_step_2)
+    #print("after step 3", init_string_after_step_3)
+    string_with_each_word_captalized = init_string_after_step_3
     return(string_with_each_word_captalized)
 def problem_2()->str:
     '''
@@ -18,10 +21,13 @@ def problem_2()->str:
         Step 3: Remove the space at the beginning of the last sentence (so the 0th character is a letter.)
         Step 4: Use string slicing to get the even-indexed characters of the last sentence
     '''
-    initial_string : str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    #TODO: follow the steps to complete this function. Your final answer should be stored in the variable even_letters_of_last_sentence
-    pass #Remove this line.
-    return even_letters_of_last_sentence
+    initial_string: str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    initial_string_after_step1 = initial_string.split('.')
+    last_sentence = initial_string_after_step1[-2]
+    last_sentence_without_initial_space = last_sentence[1:] + "."
+    even_indexed_chars_of_last_sentence = last_sentence_without_initial_space[::2]
+    print(f"{even_indexed_chars_of_last_sentence=}")
+    return even_indexed_chars_of_last_sentence
 def problem_3()->dict:
     '''
     Problem 3: Goal: Create a dictionary whose keys are the characters of the sentence. The values are the number of occurences of the character in the initial_string.
@@ -31,6 +37,9 @@ def problem_3()->dict:
         Note: a 1-line solution is intended.
     '''
     initial_string : str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    step_1_result = {letter:len([l for l in initial_string if letter == l]) for letter in initial_string}
+    print(f"{step_1_result=}")
     #TODO: follow the steps to complete this function. Your final answer should be stored in the variable dict_of_letter_frequencies.
     pass #Remove this line.
-    return dict_of_letter_frequencies
+    return step_1_result
+problem_3()
