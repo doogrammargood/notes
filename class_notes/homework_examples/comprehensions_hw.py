@@ -1,16 +1,15 @@
 #This file contains the first homework assignment, about lists, strings, and comprehensions.
 #You must rename this file as comprehensions_hw.py for the tests and autograder.
 
-def problem_1()->str:
+def problem_1() -> str:
     '''Problem 1: Goal: Capitalize the zeroth letter of each word.
         Step 1: Use the split function to create a list of the words in the initial string.
         Step 2: Use a list comprehension, string addition, and the .captalize() function to capitalize the zeroth letter of each word.
         Step 3: Use the join function to recombine the words into a string.'''
-    initial_string:str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    initial_string: str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     init_string_after_step_1 = initial_string.split()
-    init_string_after_step_2 =[s.capitalize() for s in init_string_after_step_1]
+    init_string_after_step_2 =[s.capitalize() for s in init_string_after_step_1 if 'e' in s]
     init_string_after_step_3 = " ".join(init_string_after_step_2)
-    #print("after step 3", init_string_after_step_3)
     string_with_each_word_captalized = init_string_after_step_3
     return(string_with_each_word_captalized)
 def problem_2()->str:
