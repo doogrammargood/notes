@@ -23,7 +23,7 @@ def diamond_of_stars(n: int)->None:
         print(" "*row + "*")
 #Problem 2: The weird sequence of numbers.
 
-def weird_sequence(n:int)->list[bool]:
+def weird_sequence(n:int)->list[int]:
     '''input: n is a natural number.
     Outputs: A list of numbers continuing the pattern: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300, ... and so forth.
     The list should NOT include 10^n, but end just before, at 9*10^(n-1)
@@ -43,4 +43,5 @@ def count_double_letters(input_string:str)->int:
     When run on "hmmm...?", it should return 4.
     When run on "double  spaced  words", it should return 2.'''
     pass
-diamond_of_stars(3)
+if __name__=="__main__":
+    print("This should run")
