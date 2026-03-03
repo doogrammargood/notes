@@ -8,5 +8,8 @@ for r in range(1, rows + 1):
         else:
             print("-", end=" ")
     print()
-
 #What is the output? 
+
+# T - - A - - 
+# - U - - N - 
+# - - L - - E 
