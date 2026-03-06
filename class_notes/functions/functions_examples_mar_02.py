@@ -61,7 +61,7 @@ counter_function1 = create_counter()
 counter_function1()
 counter_function1()
 counter_function1()
-print(counter_function1())
+print("64",counter_function1())
 counter_function2 = create_counter()
 counter_function2()
 counter_function2()
@@ -86,7 +86,7 @@ def create_linear_function(a,b):
         return a*x+b
     return linear_function
 f = create_linear_function(5,4)
-#print(f(10))
+print(89,f(10))
 
 #--Functions as arguments: Currying --#
 def example_function_of_two_vars(x,y):
