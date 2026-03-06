@@ -6,5 +6,5 @@ def g():
     f()
 def h():
     print(3)
-g()
 h()
+g()
